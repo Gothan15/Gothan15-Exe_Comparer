@@ -1,55 +1,61 @@
-# React + TypeScript + Vite
+# Herramienta de Comparación de Archivos Binarios
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Herramienta para comparar archivos ejecutables y analizar diferencias a nivel de bytes.
 
-Currently, two official plugins are available:
+## Características principales
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Detección de tipo de archivo y arquitectura (PE, ELF, Mach-O, etc.)
+- Cálculo de hash y porcentaje de similitud
+- Comparación detallada de bytes
 
-## Expanding the ESLint configuration
+## Requisitos
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Node.js y npm o yarn
+- Vite para desarrollo y construcción
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Scripts
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- npm run dev: inicia el modo de desarrollo
+- npm run build: genera la build de producción
+- npm run preview: ejecuta el servidor de vista previa
+- npm run lint: ejecuta ESLint
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Uso
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
-# Gothan15-Exe_Comparer
+1. Clona el repositorio y ejecuta npm install.
+2. Ejecuta npm run dev para iniciar el proyecto.
+3. Abre la aplicación en el navegador y sube dos archivos para compararlos.
+
+## Licencia
+
+Uso interno. Se recomienda revisar o agregar una licencia según sea necesario.
+
+Herramienta para comparar archivos ejecutables y analizar diferencias a nivel de bytes.
+
+## Características principales
+
+- Detección de tipo de archivo y arquitectura (PE, ELF, Mach-O, etc.)
+- Cálculo de hash y porcentaje de similitud
+- Comparación detallada de bytes
+
+## Requisitos
+
+- Node.js y npm o yarn
+- Vite para desarrollo y construcción
+
+## Scripts
+
+- npm run dev: inicia el modo de desarrollo
+- npm run build: genera la build de producción
+- npm run preview: ejecuta el servidor de vista previa
+- npm run lint: ejecuta ESLint
+
+## Uso
+
+1. Clona el repositorio y ejecuta npm install.
+2. Ejecuta npm run dev para iniciar el proyecto.
+3. Abre la aplicación en el navegador y sube dos archivos para compararlos.
+
+## Licencia
+
+Uso interno. Se recomienda revisar o agregar una licencia según sea necesario.
